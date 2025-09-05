@@ -10,3 +10,4 @@ SELECT property_id, COUNT(*) AS total_bookings,
 FROM Booking
 GROUP BY property_id
 ORDER BY rank;
+

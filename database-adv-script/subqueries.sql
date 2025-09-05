@@ -1,4 +1,4 @@
---  Non-correlated subquery
+-- 1. Non-correlated subquery: properties with avg rating > 4.0
 SELECT property_id, name
 FROM Property
 WHERE property_id IN (
@@ -8,7 +8,7 @@ WHERE property_id IN (
     HAVING AVG(rating) > 4.0
 );
 
---  Correlated subquery
+-- 2. Correlated subquery: users with more than 3 bookings
 SELECT user_id, name
 FROM User u
 WHERE (
